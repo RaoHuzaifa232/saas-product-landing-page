@@ -1,0 +1,72 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Hero Section — Component-Scoped Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Dot Grid Background ─────────────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ── Velocity Bars — Entrance Animation ──────────────────────────── */
+.velocity-bar {
+  transform-origin: bottom;
+  animation: barGrow 1.2s ease-out forwards;
+  animation-delay: calc(var(--bar-index, 0) * 0.1s);
+}
+
+@keyframes barGrow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* ── Mockup 3D Perspective Wrapper ───────────────────────────────── */
+.mockup-wrapper {
+  transform-style: preserve-3d;
+}
+
+.mockup {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ── Badge Shimmer ───────────────────────────────────────────────── */
+.hero-badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99, 102, 241, 0.15),
+    transparent
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* ── Kanban Card Hover ───────────────────────────────────────────── */
+.mockup [class*='rounded-lg']:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,168 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     Hero Section — Full viewport, split layout, kanban mockup
+     ═══════════════════════════════════════════════════════════════════ -->
+<section
+  #heroSection
+  id="hero"
+  class="relative min-h-screen pt-28 sm:pt-32 pb-20 px-6 sm:px-8 flex items-center overflow-hidden"
+>
+  <!-- ── Background Elements ────────────────────────────────────── -->
+  <div class="absolute inset-0 dot-grid -z-10 opacity-40"></div>
+  <div
+    class="glow-blob absolute -top-40 -left-40 w-96 h-96 rounded-full bg-indigo-500 opacity-10 blur-[120px] -z-10"
+  ></div>
+  <div
+    class="glow-blob absolute top-1/2 right-0 w-[600px] h-[600px] rounded-full bg-cyan-400 opacity-10 blur-[150px] -z-10"
+  ></div>
+  <div
+    class="glow-blob absolute bottom-10 left-1/3 w-72 h-72 rounded-full bg-indigo-600 opacity-[0.07] blur-[100px] -z-10"
+  ></div>
+
+  <!-- ── Main Grid ──────────────────────────────────────────────── -->
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <!-- ── Left Column (60%) ──────────────────────────────────── -->
+    <div class="md:col-span-7 flex flex-col items-start space-y-8">
+
+      <!-- Badge Pill -->
+      <div
+        class="hero-badge inline-flex items-center gap-2 px-4 py-1.5 bg-indigo-500/10 border border-indigo-500/20 rounded-full"
+      >
+        <span class="text-indigo-400 text-[10px] font-bold tracking-widest uppercase font-mono">
+          ✦ Introducing FlowDesk 2.0
+        </span>
+      </div>
+
+      <!-- Headline — word-split for GSAP stagger -->
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-extrabold tracking-tight leading-[1.05]">
+        @for (word of headlineWords; track word) {
+          <span class="hero-word inline-block text-white mr-3 sm:mr-4">{{ word }}</span>
+        }
+        <br class="hidden sm:block" />
+        @for (word of headlineMutedWords; track word) {
+          <span class="hero-word inline-block text-slate-500/50 mr-3 sm:mr-4">{{ word }}</span>
+        }
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="hero-sub text-lg sm:text-xl text-slate-400 max-w-xl leading-relaxed">
+        The command center for engineering teams. Manage sprints, track
+        velocity, and deploy with confidence — all within a single,
+        editorial workspace.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap gap-4">
+        <button
+          class="hero-btn px-8 py-4 rounded-xl btn-gradient text-[#0a0f1e] font-bold text-base hover:brightness-110 active:scale-95 transition-all duration-200 shadow-xl"
+        >
+          Start Free
+        </button>
+        <button
+          class="hero-btn px-8 py-4 rounded-xl bg-transparent border border-white/10 text-white font-bold text-base flex items-center gap-2.5 hover:bg-white/5 active:scale-95 transition-all duration-200"
+        >
+          <!-- Play icon -->
+          <svg class="w-5 h-5 text-indigo-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+          </svg>
+          Watch Demo
+        </button>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="hero-social flex flex-col gap-4 pt-2">
+        <div class="flex -space-x-3">
+          @for (avatar of avatars; track avatar.alt) {
+            <img
+              class="w-10 h-10 rounded-full border-2 border-[#0a0f1e] object-cover"
+              [src]="avatar.src"
+              [alt]="avatar.alt"
+              loading="lazy"
+            />
+          }
+          <div
+            class="w-10 h-10 rounded-full border-2 border-[#0a0f1e] bg-slate-800 flex items-center justify-center text-[10px] font-mono font-bold text-indigo-400"
+          >
+            +82
+          </div>
+        </div>
+        <p class="text-sm font-mono text-slate-500 uppercase tracking-widest">
+          Joined by 10,000+ teams
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Right Column (40%) — Kanban Mockup ─────────────────── -->
+    <div class="mockup-wrapper md:col-span-5 relative hidden sm:block" style="perspective: 1200px;">
+      <div
+        #mockup
+        class="mockup relative z-10 bg-[#161b2b]/40 backdrop-blur-2xl border border-white/5 rounded-2xl shadow-2xl p-5 sm:p-6 flex flex-col gap-5 rotate-2 transform hover:rotate-0 transition-transform duration-500"
+      >
+        <!-- Window Chrome -->
+        <div class="flex justify-between items-center pb-2">
+          <div class="flex gap-2">
+            <div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500/20"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+          </div>
+          <span class="text-[10px] font-mono text-slate-500 uppercase tracking-widest">
+            Project: Omega-7
+          </span>
+        </div>
+
+        <!-- Kanban Grid -->
+        <div class="grid grid-cols-3 gap-3 sm:gap-4">
+          @for (col of kanbanColumns; track col.title) {
+            <div class="space-y-3 sm:space-y-4">
+              <span class="text-[10px] font-mono uppercase tracking-wide {{ col.titleColor }}">
+                {{ col.title }}
+              </span>
+              @for (card of col.cards; track card.label) {
+                <div
+                  class="p-3 rounded-lg border space-y-2 {{ card.borderClass }} {{ card.bgClass }}"
+                  [class.shadow-lg]="card.ring"
+                  [class.ring-1]="card.ring"
+                  [class.ring-indigo-500/10]="card.ring"
+                >
+                  <div class="w-full h-1 rounded-full {{ card.accentColor }}"></div>
+                  <p class="text-[11px] font-medium text-white">{{ card.label }}</p>
+                  @if (card.tag) {
+                    <div class="flex justify-between items-center">
+                      @if (card.hasAvatar) {
+                        <img
+                          class="w-4 h-4 rounded-full"
+                          [src]="card.avatarSrc"
+                          alt="Assignee"
+                          loading="lazy"
+                        />
+                      } @else {
+                        <div class="w-4 h-4 rounded-full bg-slate-700"></div>
+                      }
+                      <span class="text-[9px] font-mono {{ card.tagColor }}">{{ card.tag }}</span>
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+        <!-- Velocity Chart -->
+        <div class="mt-2 p-4 bg-[#0a0f1e]/80 rounded-xl border border-white/5 flex flex-col gap-2">
+          <span class="text-[9px] font-mono text-slate-500 uppercase tracking-widest">Velocity</span>
+          <div class="h-16 w-full flex items-end gap-1">
+            @for (bar of velocityBars; track bar.height) {
+              <div
+                class="velocity-bar w-full rounded-t-sm {{ bar.color }}"
+                [style.height]="bar.height"
+              ></div>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Decorative glow behind mockup -->
+      <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-cyan-400 opacity-20 blur-[60px] -z-10"></div>
+      <div class="absolute -top-8 -left-8 w-32 h-32 bg-indigo-500 opacity-15 blur-[50px] -z-10"></div>
+    </div>
+  </div>
+</section>
