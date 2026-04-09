@@ -1,0 +1,43 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     Logos Trust Bar — Infinite Marquee
+     ═══════════════════════════════════════════════════════════════════ -->
+<section
+  #logosSection
+  id="logos"
+  class="w-full bg-[#0a0f1e] border-y border-white/10 py-6 sm:py-8 relative overflow-hidden"
+>
+  <!-- Left Gradient Mask -->
+  <div
+    class="absolute left-0 top-0 bottom-0 w-24 sm:w-32 z-10 bg-gradient-to-r from-[#0a0f1e] to-transparent pointer-events-none"
+  ></div>
+
+  <!-- Label -->
+  <div class="text-center mb-4">
+    <span class="logos-label font-mono text-[10px] uppercase tracking-[0.2em] text-white/50">
+      Trusted by teams at:
+    </span>
+  </div>
+
+  <!-- Marquee Track -->
+  <div class="relative w-full overflow-hidden flex items-center">
+    <div class="marquee-track flex flex-nowrap gap-12 sm:gap-16">
+      <!-- First set of logos -->
+      @for (name of logos; track name) {
+        <span
+          class="logo-item font-heading font-bold text-lg sm:text-xl text-white/30 tracking-tight whitespace-nowrap select-none transition-colors duration-300 hover:text-white cursor-default"
+        >{{ name }}</span>
+      }
+      <!-- Duplicate set for seamless loop -->
+      @for (name of logos; track name) {
+        <span
+          class="logo-item font-heading font-bold text-lg sm:text-xl text-white/30 tracking-tight whitespace-nowrap select-none transition-colors duration-300 hover:text-white cursor-default"
+        >{{ name }}</span>
+      }
+    </div>
+  </div>
+
+  <!-- Right Gradient Mask -->
+  <div
+    class="absolute right-0 top-0 bottom-0 w-24 sm:w-32 z-10 bg-gradient-to-l from-[#0a0f1e] to-transparent pointer-events-none"
+  ></div>
+</section>
