@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#0e1322",
+                        "surface-bright": "#343949",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "secondary": "#4cd7f6",
+                        "on-surface": "#dee1f7",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-container": "#00885d",
+                        "on-primary-fixed": "#07006c",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-container-low": "#161b2b",
+                        "on-tertiary": "#003824",
+                        "inverse-surface": "#dee1f7",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container": "#1a1f2f",
+                        "inverse-on-surface": "#2b3040",
+                        "secondary-fixed": "#acedff",
+                        "background": "#0e1322",
+                        "on-surface-variant": "#c7c4d7",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-variant": "#2f3445",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "outline-variant": "#464554",
+                        "on-primary": "#1000a9",
+                        "primary-container": "#8083ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#c0c1ff",
+                        "on-background": "#dee1f7",
+                        "primary": "#c0c1ff",
+                        "on-tertiary-container": "#000703",
+                        "surface-container-lowest": "#090e1c",
+                        "tertiary": "#4edea3",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "secondary-container": "#03b5d3",
+                        "surface-container-high": "#25293a",
+                        "on-primary-container": "#0d0096",
+                        "outline": "#908fa0",
+                        "inverse-primary": "#494bd6",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "on-error": "#690005",
+                        "surface-container-highest": "#2f3445",
+                        "on-secondary-container": "#00424e",
+                        "on-secondary": "#003640",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-dim": "#0e1322",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-tertiary-fixed-variant": "#005236"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Berkeley Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0e1322;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(14, 19, 34, 0.6);
+            backdrop-filter: blur(20px);
+        }
+
+        .ghost-border {
+            outline: 1px solid rgba(70, 69, 84, 0.15);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #c0c1ff 0%, #4cd7f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #c0c1ff 0%, #4cd7f6 100%);
+            box-shadow: 0 10px 20px -5px rgba(192, 193, 255, 0.3);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0a0f1e]/60 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <!-- Brand Identity -->
+            <div class="flex items-center gap-2">
+                <span
+                    class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">FlowDesk</span>
+            </div>
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-white font-bold border-b-2 border-indigo-500 pb-1 text-sm tracking-tight transition-colors duration-300"
+                    href="#">Features</a>
+                <a class="text-slate-400 font-medium hover:text-white text-sm tracking-tight transition-colors duration-300"
+                    href="#">How It Works</a>
+                <a class="text-slate-400 font-medium hover:text-white text-sm tracking-tight transition-colors duration-300"
+                    href="#">Pricing</a>
+                <a class="text-slate-400 font-medium hover:text-white text-sm tracking-tight transition-colors duration-300"
+                    href="#">Testimonials</a>
+            </div>
+            <!-- Trailing Action -->
+            <div class="flex items-center gap-6">
+                <button
+                    class="hidden lg:block font-label text-xs uppercase tracking-widest text-slate-400 hover:text-white transition-colors">Sign
+                    In</button>
+                <button
+                    class="px-6 py-2.5 rounded-full btn-gradient text-on-primary font-bold text-sm active:scale-95 transition-all duration-200">
+                    Get Started Free
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main class="relative pt-32 pb-24 overflow-hidden">
+        <!-- Background Decorative Elements -->
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] pointer-events-none overflow-hidden -z-10">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] rounded-full bg-primary/10 blur-[120px]"></div>
+            <div class="absolute top-[20%] right-[-5%] w-[30%] h-[50%] rounded-full bg-secondary/10 blur-[120px]"></div>
+        </div>
+        <section class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
+                <div
+                    class="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high ghost-border">
+                    <span class="font-label text-[10px] uppercase tracking-tighter text-secondary">New Version
+                        2.0</span>
+                    <span class="w-1 h-1 rounded-full bg-secondary"></span>
+                    <span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant">Available
+                        Now</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold tracking-tighter text-white mb-8 leading-[0.95]">
+                    Engineering the <br />
+                    <span class="text-gradient">Future of Flow</span>
+                </h1>
+                <p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl mb-12">
+                    FlowDesk is the architectural foundation for high-performance teams. A workspace designed for
+                    precision, speed, and digital fluidity.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-4">
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 rounded-lg btn-gradient text-on-primary font-bold text-lg hover:brightness-110 active:scale-95 transition-all">
+                        Launch Dashboard
+                    </button>
+                    <button
+                        class="w-full sm:w-auto px-8 py-4 rounded-lg bg-surface-container-high ghost-border text-white font-semibold text-lg hover:bg-surface-bright transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined"
+                            style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                        View Demo
+                    </button>
+                </div>
+            </div>
+            <!-- Bento Grid Preview -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-full min-h-[600px]">
+                <!-- Main Preview Card -->
+                <div
+                    class="md:col-span-8 relative rounded-xl bg-surface-container-high ghost-border overflow-hidden group">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div class="p-8 h-full flex flex-col justify-between">
+                        <div>
+                            <div class="font-label text-[10px] uppercase tracking-widest text-indigo-400 mb-2">Workspace
+                            </div>
+                            <h3 class="text-3xl font-bold text-white mb-4">Unified Control Plane</h3>
+                        </div>
+                        <div
+                            class="relative w-full aspect-video rounded-lg overflow-hidden border border-white/5 bg-surface-container-lowest">
+                            <img class="w-full h-full object-cover opacity-80"
+                                data-alt="Modern dark software dashboard interface with data visualizations and sleek architectural design elements"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpD2gl6wKEiSY-7EKXbiu3CZC7a59UKFRqB8SZdqo0drAoRt2XZ4qPZhJdEiMFifdlTC8qDmsBXlZVLlh_QU7HzNkGaYyu_nSYMJ3UIU_aJK0WYknvVpa8ppQlIhvXj_M7EnLdTRckF6H9stzVmwn6nzFl0h9OES5h2GhzS5264_URiJX4PFCWa-qjt_mIScYS9qAr4rvjAeV79oY6hwowNIzcsGAIffXUR-iIHjGDjob78ZOjlaodbuPp1U6okEofAZ3Ogudgz30" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Secondary Cards -->
+                <div class="md:col-span-4 flex flex-col gap-6">
+                    <div
+                        class="flex-1 rounded-xl bg-surface-container-low ghost-border p-8 relative overflow-hidden group">
+                        <span class="material-symbols-outlined text-4xl text-secondary mb-6"
+                            style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Instant Sync</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Latency-free collaboration across all
+                            global edge nodes.</p>
+                        <div class="mt-8 font-label text-[10px] text-on-surface-variant/40">LATENCY: 14MS</div>
+                    </div>
+                    <div
+                        class="flex-1 rounded-xl bg-surface-container-high ghost-border p-8 relative overflow-hidden group">
+                        <span class="material-symbols-outlined text-4xl text-primary mb-6"
+                            style="font-variation-settings: 'FILL' 1;">shield</span>
+                        <h4 class="text-xl font-bold text-white mb-2">Quantum Encryption</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">End-to-end security protocols for the
+                            most sensitive data streams.</p>
+                        <div class="mt-8 font-label text-[10px] text-on-surface-variant/40">STATUS: ENCRYPTED</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scrolling Content Placeholder -->
+            <div class="mt-32 space-y-32">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                    <div class="space-y-6">
+                        <span class="font-label text-xs uppercase tracking-widest text-secondary">The Engine</span>
+                        <h2 class="text-5xl font-bold text-white tracking-tight leading-tight">Built for the modern
+                            <br />developer mind.</h2>
+                        <p class="text-on-surface-variant text-lg">We've eliminated the noise of standard project
+                            management tools. No bloat, no clutter. Just high-density information exactly when you need
+                            it.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-white font-medium">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Keyboard-first
+                                navigation
+                            </li>
+                            <li class="flex items-center gap-3 text-white font-medium">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Real-time
+                                engine
+                            </li>
+                            <li class="flex items-center gap-3 text-white font-medium">
+                                <span class="material-symbols-outlined text-primary">check_circle</span> Custom API
+                                integrations
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rounded-2xl bg-surface-container-low ghost-border h-[500px] relative overflow-hidden">
+                        <img class="w-full h-full object-cover opacity-60"
+                            data-alt="Close-up of high-quality computer code on a dark screen with vibrant synthwave neon color highlights"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-nflZzYXkyuFM34xRLPKiLdOFqTHvX0Gu0ToDJDwiwHZ6YjxnrNQuZpgl9p1_qhFQg8CaRDIpixtP164JFzkbD5l_qMVecsQteXE-YmwOLtG7ZAdIRfDChwEzMzt--F9rExFvR8MxYw4Q0MPaq1nP6dm4qwij1HgkkpKIATQTu-2inxIklXGqd25AIPMfNi7iVgGRcUvytFj081qbAds_zXt4jcB-V5HnDBDL15u5OVtgqjxoC4Fs06Z_Ocz-AHbGhVjRo3LJGK8" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer for context -->
+    <footer class="bg-surface-container-lowest py-24 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <span class="text-2xl font-bold text-gradient mb-6 block">FlowDesk</span>
+                <p class="text-on-surface-variant max-w-xs text-sm">Elevating the digital workspace to a new standard of
+                    excellence and precision.</p>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6">Product</h5>
+                <ul class="space-y-4 text-sm text-on-surface-variant">
+                    <li class="hover:text-white transition-colors cursor-pointer">Changelog</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">Documentation</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">Security</li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="text-white font-bold mb-6">Company</h5>
+                <ul class="space-y-4 text-sm text-on-surface-variant">
+                    <li class="hover:text-white transition-colors cursor-pointer">About</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">Careers</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

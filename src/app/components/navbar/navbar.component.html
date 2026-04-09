@@ -1,0 +1,153 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     NavBar — Sticky, Glassmorphic, Responsive
+     ═══════════════════════════════════════════════════════════════════ -->
+<nav
+  #navBar
+  id="navbar"
+  class="fixed top-0 w-full z-50 transition-all duration-500"
+  [ngClass]="{
+    'bg-[#0a0f1e]/60 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]': isScrolled(),
+    'bg-transparent border-b border-transparent': !isScrolled()
+  }"
+>
+  <!-- ── Desktop Bar ────────────────────────────────────────────── -->
+  <div class="flex justify-between items-center px-6 sm:px-8 py-4 max-w-7xl mx-auto">
+
+    <!-- Brand Identity -->
+    <a
+      class="logo flex items-center gap-2 cursor-pointer select-none"
+      (click)="scrollToSection('hero')"
+    >
+      <!-- Animated glyph icon -->
+      <svg class="logo-icon w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#818cf8" />
+            <stop offset="100%" stop-color="#22d3ee" />
+          </linearGradient>
+        </defs>
+        <rect x="2" y="6" width="28" height="20" rx="4" stroke="url(#logoGrad)" stroke-width="2" fill="none" />
+        <path d="M10 16h12M10 12h8M10 20h10" stroke="url(#logoGrad)" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+      <span
+        class="text-2xl font-heading font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400 tracking-tight"
+      >FlowDesk</span>
+    </a>
+
+    <!-- Desktop Navigation Links (hidden on mobile) -->
+    <div class="hidden md:flex items-center gap-10">
+      @for (link of navLinks; track link.sectionId) {
+        <a
+          class="nav-link relative text-sm font-medium tracking-tight transition-colors duration-300 cursor-pointer"
+          [ngClass]="{
+            'text-white font-bold': activeSection() === link.sectionId,
+            'text-slate-400 hover:text-white': activeSection() !== link.sectionId
+          }"
+          (click)="scrollToSection(link.sectionId)"
+        >
+          {{ link.label }}
+          <!-- Active indicator bar -->
+          <span
+            class="absolute -bottom-1 left-0 h-[2px] bg-gradient-to-r from-indigo-500 to-cyan-400 transition-all duration-300"
+            [ngClass]="{
+              'w-full opacity-100': activeSection() === link.sectionId,
+              'w-0 opacity-0': activeSection() !== link.sectionId
+            }"
+          ></span>
+        </a>
+      }
+    </div>
+
+    <!-- Trailing Actions -->
+    <div class="flex items-center gap-4 sm:gap-6">
+      <!-- Sign In — desktop only -->
+      <button
+        class="hidden lg:block font-mono text-xs uppercase tracking-widest text-slate-400 hover:text-white transition-colors duration-300"
+      >
+        Sign In
+      </button>
+
+      <!-- CTA Button -->
+      <button
+        class="cta-btn hidden sm:inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-bold text-sm text-[#0a0f1e] active:scale-95 transition-all duration-200 btn-glow"
+      >
+        Get Started Free
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+        </svg>
+      </button>
+
+      <!-- Mobile Hamburger Toggle (visible < md) -->
+      <button
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 rounded-lg transition-colors duration-200 hover:bg-white/5"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="mobileMenuOpen()"
+        aria-label="Toggle navigation menu"
+      >
+        <!-- Animated hamburger -->
+        <span
+          class="block w-5 h-[2px] bg-white transition-all duration-300 origin-center"
+          [ngClass]="{
+            'rotate-45 translate-y-[3px]': mobileMenuOpen(),
+            'mb-[4px]': !mobileMenuOpen()
+          }"
+        ></span>
+        <span
+          class="block w-5 h-[2px] bg-white transition-all duration-300"
+          [ngClass]="{ 'opacity-0 scale-0': mobileMenuOpen() }"
+        ></span>
+        <span
+          class="block w-5 h-[2px] bg-white transition-all duration-300 origin-center"
+          [ngClass]="{
+            '-rotate-45 -translate-y-[3px]': mobileMenuOpen(),
+            'mt-[4px]': !mobileMenuOpen()
+          }"
+        ></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Mobile Dropdown Menu ───────────────────────────────────── -->
+  @if (mobileMenuOpen()) {
+    <div
+      #mobileMenu
+      class="mobile-menu md:hidden bg-[#0a0f1e]/95 backdrop-blur-2xl border-t border-white/5 overflow-hidden"
+    >
+      <div class="flex flex-col px-6 py-6 gap-2 max-w-7xl mx-auto">
+        @for (link of navLinks; track link.sectionId) {
+          <a
+            class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer"
+            [ngClass]="{
+              'text-white bg-white/5': activeSection() === link.sectionId,
+              'text-slate-400 hover:text-white hover:bg-white/5': activeSection() !== link.sectionId
+            }"
+            (click)="scrollToSection(link.sectionId)"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full transition-colors duration-300"
+              [ngClass]="{
+                'bg-cyan-400': activeSection() === link.sectionId,
+                'bg-slate-600': activeSection() !== link.sectionId
+              }"
+            ></span>
+            {{ link.label }}
+          </a>
+        }
+
+        <!-- Mobile CTA -->
+        <div class="pt-4 mt-2 border-t border-white/5 flex flex-col gap-3">
+          <button
+            class="w-full px-6 py-3 rounded-full btn-glow font-bold text-sm text-[#0a0f1e] active:scale-95 transition-all duration-200"
+          >
+            Get Started Free
+          </button>
+          <button
+            class="w-full px-6 py-3 rounded-full border border-white/10 text-slate-300 font-medium text-sm hover:bg-white/5 transition-colors"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </div>
+  }
+</nav>

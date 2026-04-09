@@ -1,3 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
-
+/* ═══════════════════════════════════════════════════════════════════
+   FlowDesk — Global Design System
+   ═══════════════════════════════════════════════════════════════════ */
 @import 'tailwindcss';
+
+/* ── Google Fonts ─────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* ── Tailwind v4 Theme Tokens ─────────────────────────────────────── */
+@theme {
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Berkeley Mono', 'JetBrains Mono', monospace;
+}
+
+/* ── Base Resets & Defaults ───────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0f1e;
+  font-family: 'DM Sans', sans-serif;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Utility: Text Gradient ──────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, #818cf8 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Utility: Glass Panel ────────────────────────────────────────── */
+.glass-panel {
+  background: rgba(10, 15, 30, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* ── Utility: Ghost Border ───────────────────────────────────────── */
+.ghost-border {
+  outline: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Utility: CTA Gradient Button ────────────────────────────────── */
+.btn-gradient {
+  background: linear-gradient(135deg, #818cf8 0%, #6366f1 40%, #22d3ee 100%);
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.35);
+}
+
+/* ── Custom Scrollbar (Webkit) ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0f1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ── Selection Color ─────────────────────────────────────────────── */
+::selection {
+  background-color: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
+}

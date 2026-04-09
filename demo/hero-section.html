@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-surface": "#dee1f7",
+                        "on-tertiary-container": "#000703",
+                        "tertiary-fixed": "#6ffbbe",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "on-primary-container": "#0d0096",
+                        "on-secondary": "#003640",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed": "#acedff",
+                        "inverse-primary": "#494bd6",
+                        "secondary": "#4cd7f6",
+                        "on-secondary-fixed": "#001f26",
+                        "inverse-surface": "#dee1f7",
+                        "on-background": "#dee1f7",
+                        "error-container": "#93000a",
+                        "background": "#0e1322",
+                        "on-primary": "#1000a9",
+                        "on-tertiary": "#003824",
+                        "outline-variant": "#464554",
+                        "primary": "#c0c1ff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-container-low": "#161b2b",
+                        "inverse-on-surface": "#2b3040",
+                        "tertiary-container": "#00885d",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container": "#1a1f2f",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "primary-container": "#8083ff",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary-container": "#03b5d3",
+                        "surface": "#0e1322",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-dim": "#0e1322",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-container-high": "#25293a",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-container-highest": "#2f3445",
+                        "on-secondary-container": "#00424e",
+                        "on-error": "#690005",
+                        "tertiary": "#4edea3",
+                        "surface-tint": "#c0c1ff",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#343949",
+                        "on-primary-fixed": "#07006c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Berkeley Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0e1322;
+            color: #dee1f7;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(circle, #ffffff10 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0a0f1e]/60 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full">
+            <div class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
+                FlowDesk</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-slate-400 font-medium hover:text-white transition-colors duration-300"
+                    href="#">Features</a>
+                <a class="text-slate-400 font-medium hover:text-white transition-colors duration-300" href="#">How It
+                    Works</a>
+                <a class="text-slate-400 font-medium hover:text-white transition-colors duration-300"
+                    href="#">Pricing</a>
+                <a class="text-slate-400 font-medium hover:text-white transition-colors duration-300"
+                    href="#">Testimonials</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="bg-gradient-to-r from-indigo-400 to-cyan-400 text-[#1000a9] px-5 py-2 rounded-lg font-bold active:scale-95 transition-transform duration-200">Get
+                    Started Free</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <main class="relative min-h-screen pt-32 pb-20 px-8 flex items-center overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 dot-grid -z-10 opacity-40"></div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-primary opacity-10 blur-[120px] rounded-full"></div>
+        <div class="absolute top-1/2 right-0 w-[600px] h-[600px] bg-secondary opacity-10 blur-[150px] rounded-full">
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <!-- Left Column (60%) -->
+            <div class="md:col-span-7 flex flex-col items-start space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full">
+                    <span class="text-primary text-[10px] font-bold tracking-widest uppercase font-label">✦ Introducing
+                        FlowDesk 2.0</span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight text-white leading-[1.05]">
+                    Ship Projects.<br />
+                    <span class="text-on-surface-variant/50">Not Excuses.</span>
+                </h1>
+                <p class="text-xl text-slate-400 max-w-xl leading-relaxed">
+                    The command center for engineering teams. Manage sprints, track velocity, and deploy with
+                    confidence—all within a single, editorial workspace.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-on-primary font-bold rounded-lg shadow-xl active:scale-95 transition-transform duration-200">
+                        Start Free
+                    </button>
+                    <button
+                        class="px-8 py-4 bg-transparent border border-outline-variant/30 text-white font-bold rounded-lg flex items-center gap-2 hover:bg-white/5 transition-colors active:scale-95 duration-200">
+                        <span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+                        Watch Demo
+                    </button>
+                </div>
+                <!-- Social Proof -->
+                <div class="flex flex-col gap-4 pt-4">
+                    <div class="flex -space-x-3">
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            data-alt="Portrait of a female software engineer in a modern office with soft bokeh background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwUGrMtUbBHmwkNn7n6OsUJxBKbc9QwRlPJbi-93_gX5otoCrza4PCciF8jjqTuX3FgBDRva9KtW4DzYR3WkjHsJgQw_ZlWTrIECaSRFdDr3DCo0iys8xOKKUBOYlB9GNMadbjBPoZmKPCaUh4iknnfyOHRpnKVgqiF_-nN9vo98bksJtaYEFp19k728PfpEobN58OCOqBLA5L-3m6H4quGc_2lLSf5MprlbAljXDxIjo7cc7rvFlNgAuh6DSUop1A50N6bs_5gMA" />
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            data-alt="Portrait of a diverse male developer smiling in a tech workspace environment"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpAIl4qn9J__BuA6t5x88cKYWQUwD26Eem9H5abJTYohKoESdy_HsPKfru9-0fiGNr4rnxDaUcy_HOfN5dKmZI5ZbKG0BLY5OMf1eZY3860RUUefeyso_hXSkRRS5oR4LuahGkPF6rEPJWZzErIxEnqZlLEel4h297Yixe7H14G7Bz2j0h0VErLLaAXFup5PfvDTK-2Vph5qnfsyObbY2NQHNaUgXb5y9WhJ7EsfYfUWhH67X5U9V7wZRSkIN1my5SnAODjBB5o98" />
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            data-alt="Professional man with glasses in a professional studio setting with dark background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv-h13eGwHOVWly9dwT1_9AAZDY0ydfKzfPG7sXN6qsuKbOlHkUAgurUYLLPrPJzSUpn7lj_SSh7HLaTuw22fdvBJNVeYyQ9adW-OzwObGVSiLxmY417ekBsW1sLT0DRdaGF1q5sb42vwmwuNBYJis_b8RLAaETPl6fD-f_qfmhup2StiHZR3Fgc4d8pUfi6m6_m5qW3K0x8FNxVKj6vpCGTLda3q12Wtbi7e3gNUCqA09P_70tRggz8lUTfwX4Mgi0m-HxEzhCl0" />
+                        <img class="w-10 h-10 rounded-full border-2 border-surface object-cover"
+                            data-alt="Female product designer portrait with neutral natural lighting and professional look"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp6IkYOGZwnq9HkxvUXPv1kdABeRK2LKTuDYjVnS4Oy_nsyREXJjr3EJOXTCR9vfrZBHuhPmg0Dx-8VkBl7J02BED-Fv0V5jJqk2kP6KffjXbzphaQ5dp42MW-tOZByFs2a-IVieSq6Fa4jHW3Bsinfn7aTOkYIPLGt1xfbofFEQMhnLms5_r8J2nqog2QW4CG4V50lA-4tEuzsttBlIY8k6ZqMJ5Eko7sU8JJsXID9-KNhf8Dwpj9kRlxT6t95YwA3P1To_xi51c" />
+                        <div
+                            class="w-10 h-10 rounded-full border-2 border-surface bg-surface-container-highest flex items-center justify-center text-[10px] font-label font-bold text-primary">
+                            +82</div>
+                    </div>
+                    <p class="text-sm font-label text-slate-500 uppercase tracking-widest">Joined by 10,000+ teams</p>
+                </div>
+            </div>
+            <!-- Right Column (40%) -->
+            <div class="md:col-span-5 relative">
+                <!-- Kanban Board Glass Card -->
+                <div
+                    class="relative z-10 bg-surface-container-low/40 backdrop-blur-2xl border border-white/5 rounded-2xl shadow-2xl p-6 flex flex-col gap-6 rotate-2 transform hover:rotate-0 transition-transform duration-500">
+                    <div class="flex justify-between items-center pb-2">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/20"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+                        </div>
+                        <span class="text-[10px] font-label text-slate-500 uppercase tracking-widest">Project:
+                            Omega-7</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Column 1 -->
+                        <div class="space-y-4">
+                            <span class="text-[10px] font-label text-slate-500 uppercase">To Do</span>
+                            <div class="bg-surface-container-high/60 p-3 rounded-lg border border-white/5 space-y-2">
+                                <div class="w-full h-1 bg-secondary/30 rounded-full"></div>
+                                <p class="text-[11px] font-medium text-white">Refactor Auth</p>
+                                <div class="flex justify-between items-center">
+                                    <div class="w-4 h-4 rounded-full bg-slate-700"></div>
+                                    <span class="text-[9px] font-label text-slate-400">#432</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column 2 -->
+                        <div class="space-y-4">
+                            <span class="text-[10px] font-label text-primary uppercase">Active</span>
+                            <div
+                                class="bg-surface-container-highest/80 p-3 rounded-lg border border-primary/20 space-y-2 shadow-lg ring-1 ring-primary/10">
+                                <div class="w-full h-1 bg-primary rounded-full"></div>
+                                <p class="text-[11px] font-medium text-white">Deploy V2.0</p>
+                                <div class="flex justify-between items-center">
+                                    <img class="w-4 h-4 rounded-full"
+                                        data-alt="Small circular avatar of a female designer"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0qC4sUkQsN7pH9Pqh6O9Zs_QW-PsvQpTaD2chH2EOqN2KOEDb-IwIdhXGiBeLNqkdwb06DJDF2Tz7nm002SrrW_wh4r9MgytFeLrSOjiJ6RClpJ6pO9qM7boyiox0rII7wpLWE0JDtgQhZG4cv8IS94eQ07q2PHMgeiGAga3hRk7DQO9D0d_Mt2I2U0ATFcYHwcB22iZSQwXu9_tvmG-lLuynBYJD7vkD7PTjPEAdaPvG_fGmboejwoAjzEaGCdwITe-q1gQ4qRk" />
+                                    <span class="text-[9px] font-label text-primary">Live</span>
+                                </div>
+                            </div>
+                            <div class="bg-surface-container-high/60 p-3 rounded-lg border border-white/5 space-y-2">
+                                <div class="w-full h-1 bg-slate-600/30 rounded-full"></div>
+                                <p class="text-[11px] font-medium text-white">API Polish</p>
+                            </div>
+                        </div>
+                        <!-- Column 3 -->
+                        <div class="space-y-4">
+                            <span class="text-[10px] font-label text-tertiary uppercase">Done</span>
+                            <div
+                                class="bg-surface-container-high/40 p-3 rounded-lg border border-white/5 space-y-2 opacity-50">
+                                <div class="w-full h-1 bg-tertiary/30 rounded-full"></div>
+                                <p class="text-[11px] font-medium text-white">Core UI Kit</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Velocity Graph Overlay -->
+                    <div class="mt-4 p-4 bg-surface/80 rounded-xl border border-white/5 flex flex-col gap-2">
+                        <span class="text-[9px] font-label text-slate-500 uppercase tracking-widest">Velocity</span>
+                        <div class="h-16 w-full flex items-end gap-1">
+                            <div class="bg-primary/20 w-full h-[40%] rounded-t-sm"></div>
+                            <div class="bg-primary/40 w-full h-[60%] rounded-t-sm"></div>
+                            <div class="bg-primary/60 w-full h-[30%] rounded-t-sm"></div>
+                            <div class="bg-primary w-full h-[90%] rounded-t-sm"></div>
+                            <div class="bg-secondary w-full h-[75%] rounded-t-sm"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ghost Decorative elements -->
+                <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-cyan-400 opacity-20 blur-[60px] -z-10"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0e1322] w-full relative bottom-0 border-t border-white/5">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+            <div class="flex flex-col items-start gap-4 mb-8 md:mb-0">
+                <div
+                    class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
+                    FlowDesk</div>
+                <p class="text-xs font-label text-slate-500 uppercase tracking-wider">© 2024 FlowDesk. Kinetic Monolith
+                    Engineering.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-xs font-label uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Privacy Policy</a>
+                <a class="text-xs font-label uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Terms of Service</a>
+                <a class="text-xs font-label uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Security</a>
+                <a class="text-xs font-label uppercase tracking-widest text-slate-500 hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Status</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
