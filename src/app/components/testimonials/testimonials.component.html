@@ -1,0 +1,57 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     Testimonials Section
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="testimonials" class="relative py-24 sm:py-32 px-6 overflow-hidden">
+  
+  <!-- Subtle Indigo Background Spotlight -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-cyan-400/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Header Section -->
+    <div class="text-center mb-16 sm:mb-20">
+      <span class="font-mono text-cyan-400 font-bold text-xs uppercase tracking-[0.3em] mb-4 block">TESTIMONIALS</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white tracking-tight">
+        Loved by 10,000+ teams worldwide
+      </h2>
+    </div>
+
+    <!-- Testimonial Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      @for (review of testimonials; track review.name) {
+        <div class="testimonial-card flex flex-col group relative bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-[0_20px_40px_rgba(6,182,212,0.15)] overflow-hidden">
+          
+          <!-- Subtle background tint on hover -->
+          <div class="absolute inset-0 bg-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -z-10"></div>
+
+          <!-- Stars -->
+          <div class="flex gap-1 mb-6">
+            @for (star of [1,2,3,4,5]; track star) {
+              <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-yellow-400 drop-shadow-sm">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"/>
+              </svg>
+            }
+          </div>
+
+          <!-- Quote -->
+          <p class="text-slate-300 text-lg leading-relaxed italic mb-10 flex-grow">
+            {{ review.quote }}
+          </p>
+
+          <!-- Profile -->
+          <div class="flex items-center gap-4 mt-auto">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center font-bold text-[#0a0f1e] shadow-inner text-sm tracking-widest shrink-0">
+              {{ review.initials }}
+            </div>
+            <div>
+              <div class="text-white font-bold text-sm tracking-wide">{{ review.name }}</div>
+              <div class="text-slate-400 text-[11px] font-mono uppercase tracking-widest mt-0.5">
+                {{ review.role }}, <span class="text-slate-300">{{ review.company }}</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      }
+    </div>
+  </div>
+</section>

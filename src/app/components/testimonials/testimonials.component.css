@@ -1,0 +1,8 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Testimonials Section — Component-Scoped Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Ensure smooth performance for scroll triggers */
+.testimonial-card {
+  will-change: transform, opacity, border-color, box-shadow;
+}
