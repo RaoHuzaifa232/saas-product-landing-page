@@ -1,0 +1,75 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     How It Works Section
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="how-it-works" class="py-24 sm:py-32 px-6 relative">
+  <div class="max-w-7xl mx-auto">
+    <!-- Header Group -->
+    <div class="text-center mb-24">
+      <span class="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400 mb-4 block font-bold">PROCESS</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-white mb-6">
+        Up and running in 3 steps
+      </h2>
+      <div class="h-1 w-24 bg-gradient-to-r from-indigo-500/50 to-cyan-400/50 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Steps Grid -->
+    <div class="relative grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+      
+      <!-- Connecting SVG Dashed Line (Desktop Only) -->
+      <div class="hidden md:block absolute top-[25%] left-[16%] right-[16%] z-0 h-1 overflow-visible">
+        <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 1">
+          <line
+            class="progress-line"
+            x1="0" y1="0.5" x2="100" y2="0.5"
+            stroke="url(#lineGradient)"
+            stroke-width="1"
+            vector-effect="non-scaling-stroke"
+          />
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#6366f1" stop-opacity="0.2" />
+              <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Step Items -->
+      @for (step of steps; track step.number) {
+        <div class="step-item relative z-10 flex flex-col items-center group">
+          
+          <!-- Glow Backdrop -->
+          <div class="absolute -top-12 w-32 h-32 bg-indigo-500/10 blur-[60px] rounded-full group-hover:bg-indigo-500/20 group-hover:scale-110 transition-all duration-500 pointer-events-none -z-10"></div>
+          
+          <!-- Number & Icon -->
+          <div class="mb-8 text-center flex flex-col items-center">
+            <span class="text-7xl md:text-8xl font-heading font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-cyan-400 opacity-90 block mb-4 tracking-tighter drop-shadow-xl">
+              {{ step.number }}
+            </span>
+            <div class="w-14 h-14 bg-white/5 backdrop-blur-md rounded-xl flex items-center justify-center text-cyan-400 shadow-[0_10px_20px_rgba(0,0,0,0.2)] border border-white/10 group-hover:border-cyan-400/30 group-hover:-translate-y-1 transition-all duration-300">
+              
+              @if (step.icon === 'layers') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg>
+              } @else if (step.icon === 'users') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              } @else if (step.icon === 'rocket') {
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-7 h-7"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z"/><path d="M9 12H4s.55-3.03 2-4V6"/><path d="M12 15v5s3.03-.55 4-2h2m-5-8a2 2 0 100-4 2 2 0 000 4z"/></svg>
+              }
+
+            </div>
+          </div>
+
+          <!-- Text content -->
+          <div class="text-center">
+            <h3 class="text-xl font-heading font-bold text-white mb-2 tracking-tight group-hover:text-cyan-100 transition-colors duration-300">
+              {{ step.title }}
+            </h3>
+            <p class="text-slate-400 font-mono text-xs leading-relaxed max-w-xs px-2">
+              {{ step.description }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

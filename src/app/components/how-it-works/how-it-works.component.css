@@ -1,0 +1,13 @@
+/* ═══════════════════════════════════════════════════════════════════
+   How It Works Section — Component-Scoped Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Dashed SVG line styling */
+.progress-line {
+  will-change: stroke-dashoffset;
+}
+
+/* Stagger animations for step cards */
+.step-item {
+  will-change: transform, opacity;
+}
