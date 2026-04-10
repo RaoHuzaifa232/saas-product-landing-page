@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Pricing Section — Component-Scoped Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Hardware acceleration for scroll animations */
+.pricing-card {
+  will-change: transform, opacity;
+}
+
+/* Ensure smooth crossfade of the price amount string */
+.price-amount {
+  will-change: opacity, transform;
+  display: inline-block;
+}

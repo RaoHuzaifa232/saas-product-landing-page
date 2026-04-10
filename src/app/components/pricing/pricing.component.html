@@ -1,0 +1,113 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     Pricing Section
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="pricing" class="relative py-24 sm:py-32 px-6 overflow-hidden">
+  
+  <!-- Ambient Background Effect -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+  <div class="max-w-7xl mx-auto">
+    <!-- Header -->
+    <div class="text-center mb-16 sm:mb-20">
+      <span class="font-mono text-xs font-bold tracking-[0.3em] text-indigo-500 uppercase block mb-4">PRICING</span>
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading font-black tracking-tight text-white mb-8">
+        Simple pricing. No surprises.
+      </h2>
+      
+      <!-- Toggle Pill -->
+      <div class="flex items-center justify-center">
+        <div class="bg-white/5 border border-white/10 p-1 rounded-full flex items-center backdrop-blur-md">
+          <button
+            (click)="toggleBilling(false)"
+            [class.bg-indigo-500]="!isYearly()"
+            [class.text-white]="!isYearly()"
+            [class.text-slate-400]="isYearly()"
+            class="px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300"
+          >
+            Monthly
+          </button>
+          
+          <button
+            (click)="toggleBilling(true)"
+            [class.bg-indigo-500]="isYearly()"
+            [class.text-white]="isYearly()"
+            [class.text-slate-400]="!isYearly()"
+            class="px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 flex items-center gap-2"
+          >
+            Yearly
+            <span class="bg-cyan-400/20 text-cyan-400 text-[10px] px-2 py-0.5 rounded-full font-mono uppercase tracking-tighter shadow-sm border border-cyan-400/20">
+              Save 20%
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative z-10 max-w-6xl mx-auto">
+      
+      @for (plan of plans; track plan.name) {
+        <div 
+          class="pricing-card rounded-2xl flex flex-col h-full bg-white/5 backdrop-blur-xl border transition-all duration-300 group"
+          [class.border-white/10]="!plan.isPopular"
+          [class.hover:border-white/20]="!plan.isPopular"
+          [class.md:scale-110]="plan.isPopular"
+          [class.border-indigo-500/50]="plan.isPopular"
+          [class.shadow-[0_0_40px_-10px_rgba(99,102,241,0.3)]]="plan.isPopular"
+          [class.z-20]="plan.isPopular"
+          [class.p-8]="!plan.isPopular"
+          [class.p-10]="plan.isPopular"
+        >
+          
+          <!-- Highlight Badge -->
+          @if (plan.isPopular) {
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-cyan-400 text-[#0a0f1e] px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+              Most Popular
+            </div>
+          }
+
+          <h3 class="font-mono text-xs uppercase tracking-widest mb-4" [class.text-indigo-400]="plan.isPopular" [class.text-slate-400]="!plan.isPopular">
+            {{ plan.name }}
+          </h3>
+          
+          <!-- Price -->
+          <div class="flex items-baseline mb-8 h-12">
+            <span class="text-4xl sm:text-5xl font-heading font-black text-white h-auto inline-flex items-baseline">
+              @if (!plan.isCustom) {
+                <span class="text-3xl mr-1 text-slate-300 font-normal">$</span>
+              }
+              <span class="price-amount">{{ formatPrice(plan, isYearly()) }}</span>
+            </span>
+            @if (!plan.isCustom) {
+              <span class="text-slate-400 ml-2 font-mono text-sm">/mo</span>
+            }
+          </div>
+
+          <!-- Features Line Items -->
+          <ul class="space-y-4 mb-10 flex-grow">
+            @for (feature of plan.features; track feature) {
+              <li class="flex items-center text-sm" [class.text-white]="plan.isPopular" [class.text-slate-300]="!plan.isPopular">
+                <!-- Check Icon -->
+                <svg viewBox="0 0 24 24" fill="none" class="w-5 h-5 text-indigo-400 mr-3 shrink-0" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span class="capitalize tracking-wide">{{ feature }}</span>
+              </li>
+            }
+          </ul>
+
+          <!-- Action Button -->
+          <button 
+            [class]="plan.ctaStyle === 'filled' 
+              ? 'w-full py-4 rounded-xl bg-gradient-to-r from-indigo-500 to-cyan-400 text-[#0a0f1e] font-black text-sm shadow-lg hover:brightness-110 active:scale-[0.98] transition-all tracking-wide'
+              : 'w-full py-3.5 rounded-xl border border-white/20 text-white font-bold text-sm bg-transparent hover:bg-white/10 active:scale-[0.98] transition-all tracking-wide'"
+          >
+            {{ plan.ctaText }}
+          </button>
+
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
