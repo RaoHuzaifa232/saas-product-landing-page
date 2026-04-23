@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#c0c1ff",
+                        "outline": "#908fa0",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001f26",
+                        "background": "#0e1322",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#000703",
+                        "surface": "#0e1322",
+                        "on-surface": "#dee1f7",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed": "#002113",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "surface-tint": "#c0c1ff",
+                        "inverse-primary": "#494bd6",
+                        "tertiary-container": "#00885d",
+                        "tertiary-fixed": "#6ffbbe",
+                        "inverse-surface": "#dee1f7",
+                        "surface-container-highest": "#2f3445",
+                        "surface-container-high": "#25293a",
+                        "secondary-fixed": "#acedff",
+                        "primary-container": "#8083ff",
+                        "on-tertiary": "#003824",
+                        "on-error": "#690005",
+                        "primary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#c7c4d7",
+                        "surface-container": "#1a1f2f",
+                        "outline-variant": "#464554",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-container-low": "#161b2b",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "on-secondary-container": "#00424e",
+                        "on-primary-fixed": "#07006c",
+                        "on-secondary": "#003640",
+                        "secondary": "#4cd7f6",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "secondary-container": "#03b5d3",
+                        "tertiary": "#4edea3",
+                        "inverse-on-surface": "#2b3040",
+                        "on-primary-container": "#0d0096",
+                        "surface-dim": "#0e1322",
+                        "surface-container-lowest": "#090e1c",
+                        "on-background": "#dee1f7",
+                        "on-primary": "#1000a9",
+                        "surface-bright": "#343949"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["Berkeley Mono"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #c0c1ff 0%, #4cd7f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- Top Navigation Bar (Shared Component Strategy) -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0e1322]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-8 py-4 max-w-full">
+        <div class="text-xl font-black tracking-tighter text-white">KINETIC</div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-gap-8 gap-x-8">
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight"
+                href="#">Platform</a>
+            <a class="text-[#c0c1ff] border-b-2 border-[#c0c1ff] pb-1 font-['Inter'] font-bold tracking-tight"
+                href="#">Solutions</a>
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight"
+                href="#">Process</a>
+            <a class="text-slate-400 hover:text-white transition-colors font-['Inter'] font-bold tracking-tight"
+                href="#">Pricing</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="bg-gradient-to-br from-primary to-secondary text-on-primary px-6 py-2 rounded-lg font-bold text-sm hover:scale-95 transition-transform duration-200">
+                Get Started
+            </button>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="min-h-screen pt-32 pb-24">
+        <!-- How It Works Section -->
+        <section class="max-w-7xl mx-auto px-8">
+            <!-- Header Group -->
+            <div class="text-center mb-24">
+                <span class="font-mono text-xs uppercase tracking-[0.3em] text-secondary mb-4 block">PROCESS</span>
+                <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-white mb-6">
+                    Up and running in 3 steps
+                </h2>
+                <div class="h-1 w-24 bg-gradient-to-r from-primary/50 to-secondary/50 mx-auto rounded-full"></div>
+            </div>
+            <!-- Steps Grid -->
+            <div class="relative grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8">
+                <!-- Connecting Dashed Line (Desktop Only) -->
+                <div
+                    class="hidden md:block absolute top-1/4 left-[15%] right-[15%] h-[1px] border-t border-dashed border-primary/20 z-0">
+                </div>
+                <!-- Step 01 -->
+                <div class="relative z-10 flex flex-col items-center group">
+                    <!-- Glow Backdrop -->
+                    <div
+                        class="absolute -top-12 w-32 h-32 bg-primary/10 blur-[60px] rounded-full group-hover:bg-primary/20 transition-all duration-500">
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-7xl md:text-8xl font-black text-gradient opacity-90 block mb-4">01</span>
+                        <div
+                            class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center text-primary shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
+                            <span class="material-symbols-outlined text-3xl">layers</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Create your workspace</h3>
+                        <p class="text-on-surface-variant font-mono text-xs leading-relaxed">Set up your team space in
+                            under 60 seconds.</p>
+                    </div>
+                </div>
+                <!-- Step 02 -->
+                <div class="relative z-10 flex flex-col items-center group">
+                    <!-- Glow Backdrop -->
+                    <div
+                        class="absolute -top-12 w-32 h-32 bg-secondary/10 blur-[60px] rounded-full group-hover:bg-secondary/20 transition-all duration-500">
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-7xl md:text-8xl font-black text-gradient opacity-90 block mb-4">02</span>
+                        <div
+                            class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center text-secondary shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
+                            <span class="material-symbols-outlined text-3xl">user_attributes</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Invite your team</h3>
+                        <p class="text-on-surface-variant font-mono text-xs leading-relaxed">Add teammates and assign
+                            roles instantly.</p>
+                    </div>
+                </div>
+                <!-- Step 03 -->
+                <div class="relative z-10 flex flex-col items-center group">
+                    <!-- Glow Backdrop -->
+                    <div
+                        class="absolute -top-12 w-32 h-32 bg-tertiary/10 blur-[60px] rounded-full group-hover:bg-tertiary/20 transition-all duration-500">
+                    </div>
+                    <div class="mb-8">
+                        <span class="text-7xl md:text-8xl font-black text-gradient opacity-90 block mb-4">03</span>
+                        <div
+                            class="w-14 h-14 bg-surface-container-high rounded-xl flex items-center justify-center text-tertiary shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
+                            <span class="material-symbols-outlined text-3xl">rocket</span>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-bold text-white mb-2">Start shipping</h3>
+                        <p class="text-on-surface-variant font-mono text-xs leading-relaxed">Plan, track, and deliver
+                            projects on time.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Dashboard Preview (Editorial Context) -->
+            <div class="mt-32 relative group">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/80 to-surface z-10"></div>
+                <div class="overflow-hidden rounded-xl bg-surface-container-low p-4 shadow-2xl border border-white/5">
+                    <img class="w-full h-auto rounded-lg opacity-40 grayscale hover:grayscale-0 transition-all duration-700"
+                        data-alt="Modern dark UI dashboard interface with data visualization charts and project management workspace in a cinematic nocturnal aesthetic"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbgStMfkswqU7cepZ24hbAtuPakUigKEZrJFznRdQ8UG0K-eKRN1YtsxNCzYnrbSd7ANLFq07F5cmN2OWfM9eweRqFHFeIrO4vRM1i6ju8MRzccAzBhyYtT7yoZMuZVeQ5NzRdOK2AfUAF73cnGRCaR7ctkyB9rO0_dHN_Hryc3i4Z6bYYybnUeXVSfmHFzy1h-JCZ-kkMX-0MK8QxAIr1fWbBNKb4ToN1_BhE5m_6E8-jHHtrPK06nN6fyRi795TuoFyCvu6vLMA" />
+                </div>
+                <!-- Interactive Overlay Callout -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-center w-full px-4">
+                    <div
+                        class="bg-surface/60 backdrop-blur-xl border border-white/10 p-8 rounded-2xl inline-block shadow-2xl">
+                        <p class="font-mono text-[10px] text-primary tracking-[0.2em] mb-4 uppercase">COMMAND PALETTE
+                            ACTIVE</p>
+                        <div
+                            class="flex items-center gap-4 bg-surface-container-highest px-6 py-3 rounded-full text-on-surface-variant">
+                            <span class="material-symbols-outlined text-sm">search</span>
+                            <span class="font-mono text-sm tracking-tight">Search workflow...</span>
+                            <span
+                                class="ml-12 px-2 py-0.5 rounded bg-surface border border-white/10 font-mono text-[10px]">⌘
+                                K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer (Shared Component) -->
+    <footer class="w-full py-12 border-t border-white/5 bg-[#0e1322]">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-4">
+                <span class="text-white font-bold font-headline">KINETIC MONOLITH</span>
+                <span class="text-slate-500 font-['Berkeley_Mono'] text-[10px]">© 2024 KINETIC MONOLITH. ALL RIGHTS
+                    RESERVED.</span>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-slate-600 hover:text-[#4cd7f6] transition-colors font-['Berkeley_Mono'] text-[10px]"
+                    href="#">Privacy</a>
+                <a class="text-slate-600 hover:text-[#4cd7f6] transition-colors font-['Berkeley_Mono'] text-[10px]"
+                    href="#">Terms</a>
+                <a class="text-slate-600 hover:text-[#4cd7f6] transition-colors font-['Berkeley_Mono'] text-[10px]"
+                    href="#">Status</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

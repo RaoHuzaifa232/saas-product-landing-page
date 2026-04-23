@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0e1322;
+        }
+
+        .font-berkeley {
+            font-family: 'Berkeley Mono', monospace;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#908fa0",
+                        "on-primary-container": "#0d0096",
+                        "surface-container-high": "#25293a",
+                        "secondary-container": "#03b5d3",
+                        "tertiary": "#4edea3",
+                        "surface-container-lowest": "#090e1c",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "primary": "#c0c1ff",
+                        "on-tertiary-container": "#000703",
+                        "surface-tint": "#c0c1ff",
+                        "on-background": "#dee1f7",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "surface-dim": "#0e1322",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-secondary": "#003640",
+                        "on-secondary-container": "#00424e",
+                        "surface-container-highest": "#2f3445",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "inverse-primary": "#494bd6",
+                        "surface-container-low": "#161b2b",
+                        "on-tertiary": "#003824",
+                        "on-secondary-fixed": "#001f26",
+                        "on-primary-fixed": "#07006c",
+                        "tertiary-container": "#00885d",
+                        "on-tertiary-fixed": "#002113",
+                        "on-surface": "#dee1f7",
+                        "secondary": "#4cd7f6",
+                        "error-container": "#93000a",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#343949",
+                        "surface": "#0e1322",
+                        "primary-container": "#8083ff",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#2f3445",
+                        "outline-variant": "#464554",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-primary": "#1000a9",
+                        "primary-fixed": "#e1e0ff",
+                        "on-surface-variant": "#c7c4d7",
+                        "background": "#0e1322",
+                        "secondary-fixed": "#acedff",
+                        "inverse-on-surface": "#2b3040",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container": "#1a1f2f",
+                        "inverse-surface": "#dee1f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    }
+                },
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden">
+    <!-- TopNavBar Alignment with JSON Hierarchy -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0a0f1e]/60 backdrop-blur-xl border-b border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-8 py-4 max-w-full">
+        <div class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
+            FlowDesk
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-white font-bold border-b-2 border-indigo-500 pb-1 font-berkeley text-xs uppercase hover:text-white transition-colors duration-300"
+                href="#">Features</a>
+            <a class="text-slate-400 font-medium font-berkeley text-xs uppercase hover:text-white transition-colors duration-300"
+                href="#">How It Works</a>
+            <a class="text-slate-400 font-medium font-berkeley text-xs uppercase hover:text-white transition-colors duration-300"
+                href="#">Pricing</a>
+            <a class="text-slate-400 font-medium font-berkeley text-xs uppercase hover:text-white transition-colors duration-300"
+                href="#">Testimonials</a>
+        </div>
+        <button
+            class="bg-gradient-to-r from-primary to-secondary text-on-primary px-6 py-2 rounded-lg font-bold text-sm active:scale-95 transition-transform duration-200">
+            Get Started Free
+        </button>
+    </nav>
+    <main class="pt-24 min-h-screen">
+        <!-- Hero Placeholder for Context -->
+        <section class="max-w-7xl mx-auto px-8 py-20 text-center">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-white mb-6">
+                The Kinetic <span
+                    class="bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">Monolith</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-on-surface-variant text-lg mb-12">
+                FlowDesk transforms the way high-performance teams orchestrate digital infrastructure through an
+                architectural editorial experience.
+            </p>
+        </section>
+        <!-- Task: Logo Trust Bar Section -->
+        <section
+            class="w-full bg-[#0a0f1e] border-y border-white/10 py-8 relative overflow-hidden h-[120px] flex flex-col justify-center">
+            <!-- Left Gradient Mask -->
+            <div
+                class="absolute left-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-r from-[#0a0f1e] to-transparent pointer-events-none">
+            </div>
+            <div class="text-center mb-4">
+                <span class="font-berkeley text-[10px] uppercase tracking-[0.2em] text-white/50">Trusted by teams
+                    at:</span>
+            </div>
+            <div class="relative w-full overflow-hidden flex items-center">
+                <div class="flex flex-nowrap justify-between w-full max-w-7xl mx-auto px-12">
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Dropbox</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Stripe</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Figma</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Vercel</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Notion</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Linear</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Shopify</span>
+                    <span class="font-headline font-bold text-lg text-white/40 tracking-tight">Atlassian</span>
+                </div>
+            </div>
+            <!-- Right Gradient Mask -->
+            <div
+                class="absolute right-0 top-0 bottom-0 w-32 z-10 bg-gradient-to-l from-[#0a0f1e] to-transparent pointer-events-none">
+            </div>
+        </section>
+        <!-- Bento Grid Feature Section for Visual Balance -->
+        <section class="max-w-7xl mx-auto px-8 py-32 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 bg-surface-container-high rounded-xl p-8 relative overflow-hidden group">
+                <div class="relative z-10">
+                    <span
+                        class="font-berkeley text-xs text-primary mb-4 block uppercase tracking-widest">Performance</span>
+                    <h3 class="text-3xl font-bold text-white mb-4">Architectural Integrity</h3>
+                    <p class="text-on-surface-variant max-w-md">Our workspace engine is built on the Kinetic Monolith
+                        philosophy, ensuring sub-10ms latency across all global clusters.</p>
+                </div>
+                <div
+                    class="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-colors duration-500">
+                </div>
+            </div>
+            <div
+                class="bg-surface-container-low rounded-xl p-8 border border-white/5 hover:border-white/10 transition-colors">
+                <span class="font-berkeley text-xs text-secondary mb-4 block uppercase tracking-widest">Precision</span>
+                <h3 class="text-2xl font-bold text-white mb-4">Type-Safe Orchestration</h3>
+                <p class="text-on-surface-variant text-sm">Automated infrastructure generation with full schema
+                    validation and real-time monitoring hooks.</p>
+            </div>
+            <div class="bg-surface-container-low rounded-xl p-8 border border-white/5 flex flex-col justify-between">
+                <div>
+                    <span
+                        class="font-berkeley text-xs text-tertiary mb-4 block uppercase tracking-widest">Security</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Zero Trust Canvas</h3>
+                </div>
+                <div
+                    class="bg-surface-container-highest rounded-lg p-4 font-berkeley text-[10px] text-tertiary/80 overflow-hidden">
+                    <div class="mb-1">ROOT@FLOWDESK: ~ % auth init</div>
+                    <div class="mb-1 text-white/40">&gt; Generating secure keys...</div>
+                    <div class="text-white/40">&gt; Handshake successful [0.4ms]</div>
+                </div>
+            </div>
+            <div class="md:col-span-2 bg-surface-container-high rounded-xl overflow-hidden min-h-[300px] relative">
+                <img alt="Server room with neon blue lights"
+                    class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+                    data-alt="Cinematic macro shot of a sleek data center server rack with glowing indigo and cyan indicator lights in a dark room"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcdG26hGzPg5V-CZzyfrul5K4diXWURINZtWXJ-lbYsCrL3_GDpDjjWc0GMD-RC6PHw2grAxZyk83YeXTAHb0yEAl9-ELRJbjGdJ_nrxS6VLIX1BXiY7-63SZADMnse7-vmyqPYOkcrS50eSbN7JX_5jfOKE2mefkzOFBklBFHuwRzG7pRPehaixv2KehDDWj_NmajLJc0nY11Q_NzGfj3J9h38L3dMHIdDRJObB0wO2mhDHeogXFSzrhiA-ULtbBvs-3EC8eVTP0" />
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent p-8 flex flex-col justify-end">
+                    <h3 class="text-3xl font-bold text-white">Global Edge Network</h3>
+                    <p class="text-on-surface-variant max-w-sm">Deploy to 300+ edge locations with a single command.
+                        Your code lives where your users are.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Alignment with JSON Hierarchy -->
+    <footer class="bg-[#0e1322] border-t border-white/5 w-full relative bottom-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0">
+                <div
+                    class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400 mb-2">
+                    FlowDesk
+                </div>
+                <p class="text-slate-500 font-berkeley text-xs uppercase tracking-tighter">
+                    © 2024 FlowDesk. Kinetic Monolith Engineering.
+                </p>
+            </div>
+            <div class="flex space-x-8">
+                <a class="text-slate-500 font-berkeley text-xs uppercase hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Privacy Policy</a>
+                <a class="text-slate-500 font-berkeley text-xs uppercase hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Terms of Service</a>
+                <a class="text-slate-500 font-berkeley text-xs uppercase hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Security</a>
+                <a class="text-slate-500 font-berkeley text-xs uppercase hover:text-cyan-400 transition-colors duration-200"
+                    href="#">Status</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

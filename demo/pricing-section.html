@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FlowDesk Pricing | KINETIC</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#25293a",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#e1e0ff",
+                        "tertiary-container": "#00885d",
+                        "error-container": "#93000a",
+                        "outline": "#908fa0",
+                        "on-primary-container": "#0d0096",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#343949",
+                        "background": "#0e1322",
+                        "secondary-container": "#03b5d3",
+                        "inverse-surface": "#dee1f7",
+                        "surface-dim": "#0e1322",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "primary-container": "#8083ff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-primary": "#1000a9",
+                        "primary": "#c0c1ff",
+                        "surface-container-lowest": "#090e1c",
+                        "on-tertiary": "#003824",
+                        "on-tertiary-container": "#000703",
+                        "on-surface-variant": "#c7c4d7",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "surface-container-low": "#161b2b",
+                        "on-background": "#dee1f7",
+                        "inverse-primary": "#494bd6",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "surface-variant": "#2f3445",
+                        "on-secondary-fixed": "#001f26",
+                        "surface-container": "#1a1f2f",
+                        "secondary": "#4cd7f6",
+                        "on-secondary-container": "#00424e",
+                        "surface-container-highest": "#2f3445",
+                        "on-error": "#690005",
+                        "tertiary": "#4edea3",
+                        "surface-tint": "#c0c1ff",
+                        "outline-variant": "#464554",
+                        "on-surface": "#dee1f7",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface": "#0e1322",
+                        "secondary-fixed": "#acedff",
+                        "inverse-on-surface": "#2b3040",
+                        "on-tertiary-fixed": "#002113",
+                        "on-secondary": "#003640",
+                        "on-primary-fixed": "#07006c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "mono": ["Berkeley Mono"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-card {
+            background: rgba(14, 19, 34, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pro-card-glow {
+            box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary min-h-screen">
+    <!-- TopNavBar Execution -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#0e1322]/60 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)] flex justify-between items-center px-8 py-4 max-w-full">
+        <div class="text-xl font-black tracking-tighter text-white">KINETIC</div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="font-['Inter'] font-bold tracking-tight text-slate-400 hover:text-white transition-colors"
+                href="#">Platform</a>
+            <a class="font-['Inter'] font-bold tracking-tight text-slate-400 hover:text-white transition-colors"
+                href="#">Solutions</a>
+            <a class="font-['Inter'] font-bold tracking-tight text-slate-400 hover:text-white transition-colors"
+                href="#">Process</a>
+            <a class="font-['Inter'] font-bold tracking-tight text-[#c0c1ff] border-b-2 border-[#c0c1ff] pb-1"
+                href="#">Pricing</a>
+        </div>
+        <button
+            class="bg-gradient-to-r from-primary to-secondary text-on-primary px-6 py-2 rounded-lg font-bold hover:scale-95 duration-200 transition-transform">
+            Get Started
+        </button>
+    </nav>
+    <main class="relative pt-32 pb-24 px-6 overflow-hidden">
+        <!-- Radial Background Effect -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none">
+        </div>
+        <!-- Header Section -->
+        <div class="max-w-4xl mx-auto text-center mb-20 relative z-10">
+            <span
+                class="font-mono text-xs font-bold tracking-[0.3em] text-[#6366F1] uppercase block mb-4">PRICING</span>
+            <h1 class="text-5xl md:text-6xl font-black tracking-tighter text-white mb-8">
+                Simple pricing. No surprises.
+            </h1>
+            <!-- Toggle -->
+            <div class="flex items-center justify-center space-x-4">
+                <div class="bg-surface-container-highest p-1 rounded-full flex items-center">
+                    <button
+                        class="px-6 py-2 rounded-full text-sm font-bold bg-white text-surface shadow-sm">Monthly</button>
+                    <button
+                        class="px-6 py-2 rounded-full text-sm font-bold text-on-surface-variant hover:text-white transition-colors flex items-center">
+                        Yearly
+                        <span
+                            class="ml-2 bg-tertiary/20 text-tertiary text-[10px] px-2 py-0.5 rounded-full font-mono uppercase tracking-tighter">Save
+                            20%</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Pricing Grid -->
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative z-10">
+            <!-- Free Tier -->
+            <div
+                class="glass-card p-10 rounded-xl flex flex-col h-full border border-white/5 hover:border-white/10 transition-all duration-300">
+                <h3 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Free</h3>
+                <div class="flex items-baseline mb-8">
+                    <span class="text-4xl font-black text-white">$0</span>
+                    <span class="text-on-surface-variant ml-2 font-mono text-sm">/mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        3 projects
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        5 members
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        basic analytics
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        2GB storage
+                    </li>
+                </ul>
+                <button
+                    class="w-full py-3 rounded-lg border border-outline-variant text-white font-bold text-sm hover:bg-white/5 transition-all">
+                    Get Started Free
+                </button>
+            </div>
+            <!-- Pro Tier (Highlighted) -->
+            <div
+                class="glass-card p-12 rounded-xl flex flex-col h-full border-2 border-primary/30 pro-card-glow transform md:scale-110 relative z-20">
+                <div
+                    class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg">
+                    Most Popular
+                </div>
+                <h3 class="font-mono text-xs uppercase tracking-widest text-primary mb-2">Pro</h3>
+                <div class="flex items-baseline mb-8">
+                    <span class="text-5xl font-black text-white">$12</span>
+                    <span class="text-on-surface-variant ml-2 font-mono text-sm">/mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center text-sm text-white">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3"
+                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Unlimited projects
+                    </li>
+                    <li class="flex items-center text-sm text-white">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3"
+                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        20 members
+                    </li>
+                    <li class="flex items-center text-sm text-white">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3"
+                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        advanced analytics
+                    </li>
+                    <li class="flex items-center text-sm text-white">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3"
+                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        20GB storage
+                    </li>
+                    <li class="flex items-center text-sm text-white">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3"
+                            style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        priority support
+                    </li>
+                </ul>
+                <button
+                    class="w-full py-4 rounded-lg bg-gradient-to-r from-primary to-secondary text-on-primary font-black text-sm shadow-xl hover:opacity-90 transition-all hover:scale-[1.02]">
+                    Start Pro Trial
+                </button>
+            </div>
+            <!-- Enterprise Tier -->
+            <div
+                class="glass-card p-10 rounded-xl flex flex-col h-full border border-white/5 hover:border-white/10 transition-all duration-300">
+                <h3 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Enterprise</h3>
+                <div class="flex items-baseline mb-8">
+                    <span class="text-4xl font-black text-white">Custom</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow">
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        Unlimited everything
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        SSO
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        SLA guarantee
+                    </li>
+                    <li class="flex items-center text-sm text-on-surface-variant">
+                        <span class="material-symbols-outlined text-primary text-lg mr-3">check_circle</span>
+                        dedicated support
+                    </li>
+                </ul>
+                <button
+                    class="w-full py-3 rounded-lg border border-outline-variant text-white font-bold text-sm hover:bg-white/5 transition-all">
+                    Contact Sales
+                </button>
+            </div>
+        </div>
+        <!-- Security/Trust Badges -->
+        <div class="max-w-4xl mx-auto mt-24 text-center">
+            <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-8">Trusted by industry leaders
+                worldwide</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 opacity-40 grayscale contrast-125">
+                <img alt="Partner Logo" class="h-6 object-contain"
+                    data-alt="minimalist tech logo representing a Fortune 500 partner, monochrome and clean"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZSZM0SJGnki_5SOWciwPTBYoZKXBhyYvGUKoaMqQF6y3q1By7gU5DIW3QCeXbloGH0HIEvtfZSFhNkvoyUj-vEGYhfcgbal2EtZYEwghcby1bLiBNz_HNrHuPVpNroFJm5mBe01g80bt7X2C5rOjHkGy0z1-UBvYL3GV8nzavR0dHW6HOdNbhXtux_1nY6L-E19R6LldlC5ouORlOSKnXLwZEvNZxl5az8yGZg8R2OMz9rDq5ZD1r3wOxD47Y20-SVy7IJ9-cAUg" />
+                <img alt="Partner Logo" class="h-6 object-contain"
+                    data-alt="minimalist tech logo representing a Fortune 500 partner, monochrome and clean"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwn96M_wOAqVKpwFvldpBCHCo9Fh8fPe8GxhUVF9q1txAxrgQ6-Ns7njPK8J0LdBt4l-_y0xog8LtmXkiEVCPp5VDJD4l_WSFrRREn1Tmu8Ep8LGaMAGc7ydqLDGGlykRfdRnR3oj0RzSR1tnQZeUFtFBv3S4ZoOfiBv7L2pjIB3DGOHxAaXbKreLXyW9hMWk6oICR71H2yZ1oH00cspndqUr-H2NWbWz0Eu-FcAYxDqh11kSzuCIsn7_dW4IATqAJJsdjthO8NIk" />
+                <img alt="Partner Logo" class="h-6 object-contain"
+                    data-alt="minimalist tech logo representing a Fortune 500 partner, monochrome and clean"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCALcjVcQ6y56puZJSW1ztDij9Naqx9HpELxn9zUahrxMhI97GfgHToHeQYlPpcOMnmB7Nc8qR9fMYeEzQifJJ-d2hG2_rrbubXaGM9tziIIc7ztUxc5SL0UtWXPYeUUiaH_wMK-5odYsGtFsEittN7GD8MAArUaorcudwJ5xnky9loiDCuJeIWRdAHJEkxvpUXG8ATjJM300BScJcPVIk2m1eEThvZ9ePxiHmjP44kyYlQTbbmdGLXsE-eZGEslkYMUJQ2ooMZ5b8" />
+                <img alt="Partner Logo" class="h-6 object-contain"
+                    data-alt="minimalist tech logo representing a Fortune 500 partner, monochrome and clean"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpOlSX0AJJowI55zHD2LtieWTvlVEDEJqAuAleCpx64u-rpjGgjAhKYMV6pE0PXM6fix_rfAUBqz1f1vO9GLMzbA5mxDKVaqrFZy_huRTYAw9p1zV5ajmCwDCE8A-NWK_fkQUrWz8g0nwq3KtwgeGsOPcHi0BxGdoO5SW3qg2fKg9-qQ-Djh_8Dl0fq5raDX6z9z8Kh5PYNZnRQL44elpjzre8vLsYysgXM1lseWnupdG1q4yIMG0q5UCEnsEtrFpjHIrzw6HSq4" />
+            </div>
+        </div>
+    </main>
+    <!-- Footer Execution -->
+    <footer class="w-full py-12 border-t border-white/5 bg-[#0e1322]">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-white font-bold text-sm tracking-tighter">KINETIC MONOLITH</div>
+            <div class="font-['Berkeley_Mono'] text-[10px] text-slate-500 uppercase tracking-widest text-center">
+                © 2024 KINETIC MONOLITH. ALL RIGHTS RESERVED.
+            </div>
+            <div class="flex space-x-6">
+                <a class="font-['Berkeley_Mono'] text-[10px] text-slate-600 hover:text-[#4cd7f6] transition-colors uppercase tracking-widest"
+                    href="#">Privacy</a>
+                <a class="font-['Berkeley_Mono'] text-[10px] text-slate-600 hover:text-[#4cd7f6] transition-colors uppercase tracking-widest"
+                    href="#">Terms</a>
+                <a class="font-['Berkeley_Mono'] text-[10px] text-slate-600 hover:text-[#4cd7f6] transition-colors uppercase tracking-widest"
+                    href="#">Status</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
