@@ -1,0 +1,50 @@
+<!-- ═══════════════════════════════════════════════════════════════════
+     CTA Banner Section
+     ═══════════════════════════════════════════════════════════════════ -->
+<section id="cta-banner" class="relative py-24 sm:py-32 overflow-hidden mt-12 bg-gradient-to-br from-indigo-600 via-indigo-500 to-cyan-500">
+  
+  <!-- CSS Dot Grid Overlay -->
+  <div class="absolute inset-0 z-0 dot-pattern opacity-40 mix-blend-overlay"></div>
+
+  <!-- Animated Particles -->
+  <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+    @for (p of particles; track p.id) {
+      <div 
+        class="particle absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+        [style.width.px]="p.size"
+        [style.height.px]="p.size"
+        [style.left.%]="p.left"
+        [style.top.%]="p.top"
+        [style.opacity]="p.opacity"
+      ></div>
+    }
+  </div>
+
+  <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+    <!-- Header -->
+    <h2 class="cta-content-animate text-4xl md:text-5xl lg:text-7xl font-heading font-black tracking-tighter text-white mb-6 drop-shadow-lg">
+      Ready to build faster?
+    </h2>
+    
+    <!-- Subtext -->
+    <p class="cta-content-animate text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-10 leading-relaxed font-body">
+      Start for free — no credit card required. Cancel anytime.
+    </p>
+    
+    <!-- Large Button -->
+    <div class="cta-content-animate flex justify-center mb-6">
+      <button class="cta-button bg-white text-indigo-600 px-8 py-4 rounded-full font-heading font-bold text-lg shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] hover:text-indigo-500 hover:bg-slate-50 transition-all active:scale-95 flex items-center justify-center gap-2 group">
+        Get Started Free
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="w-5 h-5 group-hover:translate-x-1 transition-transform" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"/><path d="M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Disclaimer -->
+    <p class="cta-content-animate text-sm text-indigo-200/80 font-mono tracking-widest uppercase flex items-center justify-center gap-2">
+      <span class="text-cyan-300">✦</span> Free forever plan available
+    </p>
+
+  </div>
+</section>

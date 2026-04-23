@@ -1,0 +1,14 @@
+/* ═══════════════════════════════════════════════════════════════════
+   CTA Banner Section — Component-Scoped Styles
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Hardware acceleration for scroll animations */
+.cta-content-animate, .cta-button, .particle {
+  will-change: transform, opacity;
+}
+
+/* Base dot pattern layout */
+.dot-pattern {
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 24px 24px;
+}
