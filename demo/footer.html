@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;family=Berkeley+Mono&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#0e1322",
+                        "on-tertiary": "#003824",
+                        "on-error": "#690005",
+                        "on-background": "#dee1f7",
+                        "outline-variant": "#464554",
+                        "surface-bright": "#343949",
+                        "tertiary-container": "#00885d",
+                        "tertiary-fixed": "#6ffbbe",
+                        "secondary-fixed": "#acedff",
+                        "inverse-on-surface": "#2b3040",
+                        "inverse-surface": "#dee1f7",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "primary-container": "#8083ff",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "secondary": "#4cd7f6",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#03b5d3",
+                        "surface-container": "#1a1f2f",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "background": "#0e1322",
+                        "on-primary": "#1000a9",
+                        "outline": "#908fa0",
+                        "error": "#ffb4ab",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#00424e",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#2f3445",
+                        "on-secondary-fixed": "#001f26",
+                        "inverse-primary": "#494bd6",
+                        "on-tertiary-container": "#000703",
+                        "on-surface": "#dee1f7",
+                        "on-primary-container": "#0d0096",
+                        "surface-dim": "#0e1322",
+                        "surface-container-low": "#161b2b",
+                        "on-tertiary-fixed": "#002113",
+                        "surface-variant": "#2f3445",
+                        "on-primary-fixed": "#07006c",
+                        "on-surface-variant": "#c7c4d7",
+                        "tertiary": "#4edea3",
+                        "surface-tint": "#c0c1ff",
+                        "on-secondary": "#003640",
+                        "surface-container-high": "#25293a",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "primary": "#c0c1ff",
+                        "surface-container-lowest": "#090e1c",
+                        "primary-fixed-dim": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Berkeley Mono", "monospace"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            background-color: #0e1322;
+            color: #dee1f7;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- Content Placeholder to demonstrate the Kinetic Monolith approach -->
+    <main class="flex-grow flex flex-col items-center justify-center p-8 space-y-12">
+        <section class="max-w-4xl w-full">
+            <div class="bg-surface-container-high p-12 rounded-xl relative overflow-hidden group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700">
+                </div>
+                <div class="relative z-10">
+                    <span class="font-label text-xs uppercase tracking-widest text-secondary mb-4 block">Workspace
+                        Architecture</span>
+                    <h1 class="text-5xl font-black text-white leading-tight -tracking-[0.02em] mb-6">Built for the next
+                        generation of <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">High-Velocity
+                            Teams.</span></h1>
+                    <p class="text-on-surface-variant text-xl max-w-2xl leading-relaxed">Experience a workspace that
+                        moves as fast as you do. Minimalist aesthetics met with developer-grade precision.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Grid Example -->
+        <section class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 px-8">
+            <div class="md:col-span-2 bg-surface-container-low p-8 rounded-lg">
+                <span class="font-label text-[10px] text-outline uppercase tracking-widest block mb-4">Core
+                    Engine</span>
+                <h3 class="text-2xl font-bold text-white mb-2">Real-time Velocity Tracking</h3>
+                <div class="h-48 mt-8 bg-surface-container-highest rounded-lg overflow-hidden relative">
+                    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-primary/20 to-transparent">
+                    </div>
+                    <img class="w-full h-full object-cover mix-blend-lighten opacity-40"
+                        data-alt="Abstract data visualization with glowing blue and purple lines representing high velocity network traffic on a dark background"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_7SOzEKlvv8Pvmo20GsyKTF7VVCLvBQoVJnSAhIcU2R8WnpYvBI4Xff4yVa0nYxS1hW1jbof06YnLD42KUoHIaaRvfOu7Gn0WKBirn5ik0VDvTqUPavB1w0mrIiEWf3ouqpbhynlQLYhLi8GMi64SeDP_sUEx3A9VSgk88zZXgR3jG7yUWRz3jYquYwBdhMSUzNKBvf2QZaAzsvl4fHwTH8pSqb-8Q62OYGtG9b10K1PObyCZfBSVoOXbbWDkOTadRzi3tCIZuw" />
+                </div>
+            </div>
+            <div class="bg-surface-container-high p-8 rounded-lg flex flex-col justify-between">
+                <div>
+                    <span class="font-label text-[10px] text-outline uppercase tracking-widest block mb-4">Command
+                        Center</span>
+                    <h3 class="text-2xl font-bold text-white mb-2">Omni-Search</h3>
+                    <p class="text-on-surface-variant text-sm mt-4">Press <kbd
+                            class="font-label bg-surface-container-highest px-1.5 py-0.5 rounded text-[10px]">CMD +
+                            K</kbd> to unlock anything in your workspace instantly.</p>
+                </div>
+                <div class="mt-8 flex items-center space-x-2 text-secondary">
+                    <span class="material-symbols-outlined">terminal</span>
+                    <span class="font-label text-xs">flowdesk search --all</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER COMPONENT -->
+    <footer class="w-full bg-[#0e1322] border-t border-[#464554]/15">
+        <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Column 1: Brand & Identity -->
+            <div class="md:col-span-1 space-y-6">
+                <a class="text-2xl font-black bg-clip-text text-transparent bg-gradient-to-br from-[#c0c1ff] to-[#4cd7f6] inline-block"
+                    href="#">
+                    FlowDesk
+                </a>
+                <p class="text-slate-400 font-normal leading-relaxed text-sm max-w-xs">
+                    The workspace for high-velocity teams. Designed for precision, speed, and focus.
+                </p>
+                <div class="flex items-center space-x-5">
+                    <a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">
+                        <span class="material-symbols-outlined text-xl"
+                            data-icon="brand_awareness">brand_awareness</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="code">code</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="groups">groups</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Column 2: Product -->
+            <div class="space-y-6">
+                <h4 class="font-headline font-bold text-white text-sm -tracking-[0.02em] uppercase">Product</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Features</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Pricing</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Changelog</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Roadmap</a></li>
+                </ul>
+            </div>
+            <!-- Column 3: Company -->
+            <div class="space-y-6">
+                <h4 class="font-headline font-bold text-white text-sm -tracking-[0.02em] uppercase">Company</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">About</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Blog</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Careers</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Press</a></li>
+                </ul>
+            </div>
+            <!-- Column 4: Legal -->
+            <div class="space-y-6">
+                <h4 class="font-headline font-bold text-white text-sm -tracking-[0.02em] uppercase">Legal</h4>
+                <ul class="space-y-4">
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Privacy Policy</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Terms of Service</a></li>
+                    <li><a class="font-label text-xs text-slate-400 hover:text-white transition-colors duration-200"
+                            href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="w-full border-t border-[#464554]/15 bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="text-slate-500 font-label text-[10px] tracking-wider uppercase">
+                    © 2024 FlowDesk. All rights reserved.
+                </span>
+                <div class="flex items-center space-x-2 text-slate-500 font-label text-[10px] tracking-wider uppercase">
+                    <span>Made with</span>
+                    <span class="material-symbols-outlined text-sm text-secondary"
+                        style="font-variation-settings: 'FILL' 1;">favorite</span>
+                    <span>for fast teams</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
